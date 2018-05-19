@@ -1,0 +1,10 @@
+E100:
+  message: This is error
+E101: This is basic school error
+E600: This is grad school error
+  value: foo
+  message: This should overwrite thing
+
+# comment
+E1001: A subcase of E100
+E1002: A subcase of E100 also

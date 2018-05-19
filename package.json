@@ -1,0 +1,26 @@
+{
+  "name": "eslint-plugin-awesome-errors",
+  "version": "0.0.0",
+  "description": "An eslint plugin to make your Errors awesome.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "William Hilton",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "cp errors.yaml.backup errors.yaml && mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~3.9.1",
+    "mocha": "^3.5.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,17 @@
+E100:
+  message: This is error
+E101: This is basic school error
+E600: This is grad school error
+  value: foo
+  message: This should overwrite thing
+
+# comment
+E1001: A subcase of E100
+E1002: A subcase of E100 also
+E1003: foo
+E1004: 400
+E1005: Some error
+E1006: Some error
+E1007: myfile.js:22 Some error
+E1008: E99 myfile.js:11
+E1009: Some error: ${data}
