@@ -20,35 +20,33 @@ $ npm install eslint-plugin-awesome-errors --save-dev
 
 ## Usage
 
-Add `awesome-errors` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Create an `errors.yaml` file in your project's root directory (or wherever you run eslint).
+
+Add `awesome-errors` to the plugins section of your `.eslintrc` configuration file like so:
 
 ```json
 {
-    "plugins": [
-        "awesome-errors"
-    ]
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "awesome-errors"
+  ],
+  "rules": {
+    "awesome-errors/all-errors-have-code": "error",
+    "awesome-errors/all-errors-have-filename": "error",
+    "awesome-errors/hardcoded-line-numbers": "error"
+  }
 }
-```
-
-Then create an `errors.yaml` file in your project's root directory (or wherever you run eslint).
-
-Now, run:
 
 ```
-eslint \
-  --rule 'awesome-errors/all-errors-have-code: error' \
-  --rule 'awesome-errors/all-errors-have-filename: error' \
-  --rule 'awesome-errors/hardcoded-line-numbers: error' \
-  --config .eslintrc.base.yaml \
-  --no-eslintrc \
-  --plugin awesome-errors \
-  --fix
-  .
-```
+
+Now, run `eslint --fix ./src`. Boom! :boom: Your errors are awesome.
+Neaten up `errors.yaml` as desired and integrate it into your documentation.
 
 ## Supported Rules
 
-* hardcoded-line-numbers: Ensure hardcoded line numbers in strings (in the form "filename.js:nn") are up to date.
 * all-errors-have-code: Make sure all errors include an error code defined in errors.yaml.
 * all-errors-have-filename: Make sure all errors include an the filename and line number.
-
+* hardcoded-line-numbers: Ensure hardcoded line numbers in strings (in the form "filename.js:nn") are up to date.
